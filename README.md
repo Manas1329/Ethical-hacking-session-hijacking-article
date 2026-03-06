@@ -1,7 +1,7 @@
 # Session Hijacking and User Session Security
 Ethical Hacking Article | Cybersecurity Concepts
 
-Introduction
+## Introduction
 
 Modern web applications rely heavily on session management to maintain user authentication. Whenever a user logs into a website such as email, social media, banking, or e-commerce platforms, the server creates a session that allows the user to stay logged in while navigating different pages.
 
@@ -11,7 +11,7 @@ However, attackers often attempt to exploit this mechanism. If a malicious user 
 
 Session hijacking is one of the major threats in web security because it allows attackers to bypass login credentials and directly access a user’s account. Understanding how this attack works and how it can be prevented is an important part of ethical hacking and cybersecurity.
 
-What is Session Hijacking?
+## What is Session Hijacking?
 
 Session hijacking is a cyber attack in which an attacker takes control of an active session between a user and a web server. Instead of attempting to crack a password, the attacker simply steals the session token or session ID that represents the authenticated user.
 
@@ -19,19 +19,19 @@ Once the attacker obtains the session ID, they can send requests to the server p
 
 In simple terms, the process works like this:
 
-A user logs into a web application.
+1. A user logs into a web application.
 
-The server creates a session and assigns a Session ID.
+2. The server creates a session and assigns a Session ID.
 
-The Session ID is stored in the browser and sent with every request.
+3. The Session ID is stored in the browser and sent with every request.
 
-If an attacker steals this Session ID, they can reuse it.
+4. If an attacker steals this Session ID, they can reuse it.
 
 The attacker gains access to the user’s account without knowing the password.
 
 Because many web applications rely on sessions to maintain login status, protecting session information is critical for maintaining system security.
 
-Common Techniques Used in Session Hijacking
+## Common Techniques Used in Session Hijacking
 
 Attackers use several techniques to capture or manipulate session information.
 
@@ -53,25 +53,25 @@ In session fixation, the attacker tricks the user into using a known session ID.
 
 These techniques are commonly studied by ethical hackers in order to identify vulnerabilities and improve the security of web systems.
 
-Impact of Session Hijacking
+## Impact of Session Hijacking
 
 Session hijacking can have serious consequences for both individuals and organizations. Some major impacts include:
 
-Unauthorized access to personal accounts
+- Unauthorized access to personal accounts
 
-Theft of confidential information
+- Theft of confidential information
 
-Identity theft and misuse of user data
+- Identity theft and misuse of user data
 
-Unauthorized financial transactions
+- Unauthorized financial transactions
 
-Damage to an organization’s reputation
+- Damage to an organization’s reputation
 
-Data breaches affecting multiple users
+- Data breaches affecting multiple users
 
 For example, if an attacker hijacks a session of a user logged into an online banking platform, they may be able to perform transactions without needing the user’s password. This is why organizations must implement strong session security mechanisms.
 
-Preventing Session Hijacking
+## Preventing Session Hijacking
 
 There are several security practices that can significantly reduce the risk of session hijacking attacks.
 
@@ -79,7 +79,7 @@ Use HTTPS Encryption
 
 All communication between the client and server should be encrypted using HTTPS. Encryption ensures that attackers cannot easily intercept session information through network monitoring.
 
-Secure Session Cookies
+### Secure Session Cookies
 
 Session cookies should include security attributes such as:
 
@@ -89,29 +89,29 @@ Secure Flag – Ensures cookies are transmitted only over HTTPS connections
 
 These settings help protect session information from malicious scripts and insecure connections.
 
-Session Timeout
+### Session Timeout
 
 Web applications should automatically log out users after a period of inactivity. This limits the time during which an attacker can exploit a stolen session.
 
-Regenerate Session IDs
+### Regenerate Session IDs
 
 Web servers should generate new session IDs whenever a user logs in or when their access level changes. This prevents attackers from using previously known session identifiers.
 
-Input Validation and XSS Protection
+### Input Validation and XSS Protection
 
 Developers should validate and sanitize all user inputs to prevent Cross-Site Scripting attacks that could steal session cookies.
 
-Multi-Factor Authentication (MFA)
+### Multi-Factor Authentication (MFA)
 
 Adding an extra layer of authentication such as OTPs or authentication apps helps protect user accounts even if session data is compromised.
 
-Role of Ethical Hackers
+## Role of Ethical Hackers
 
 Ethical hackers play a crucial role in identifying vulnerabilities related to session management. They perform penetration testing and security assessments to simulate real-world attacks such as session hijacking.
 
 By testing web applications, ethical hackers can identify weak session handling mechanisms, insecure cookies, or vulnerabilities like XSS that could lead to session theft. They then recommend improvements that help organizations strengthen their cybersecurity defenses.
 
-Conclusion
+## Conclusion
 
 Session hijacking is a significant cybersecurity threat that targets weaknesses in web session management. By stealing or manipulating session IDs, attackers can gain unauthorized access to user accounts without needing passwords.
 
