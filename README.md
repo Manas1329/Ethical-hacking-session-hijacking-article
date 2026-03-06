@@ -1,2 +1,2 @@
-# Ethical-hacking-session-hijacking-article
-Article on Session Hijacking and User Session Security – Ethical Hacking Assignment
+# Session Hijacking and User Session Security
+Ethical Hacking Article | Cybersecurity Concepts
